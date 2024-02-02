@@ -1,7 +1,9 @@
 public class Karte {
-    private int wert;
+    private int wert;                    // Instanzvariablen
     private String farbe;
-    private int anzahlKarten = 0;
+    private static int anzahlKarten = 0; // Klassenvariable
+
+    public static final int MAX_ANZAHL_KARTEN = 10;
 
     // Standard (normale) Konstruktor
     public Karte(int wert, String farbe) {
@@ -14,11 +16,13 @@ public class Karte {
         return wert;
     }
 
+    // Instanzmethode
     public String getFarbe() {
         return farbe;
     }
 
-    public int getAnzahlKarten() {
+    // Klassenmethode
+    public static int getAnzahlKarten() {
         return anzahlKarten;
     }
 }
